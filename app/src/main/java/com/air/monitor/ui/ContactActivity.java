@@ -37,7 +37,7 @@ public class ContactActivity extends BaseActivity implements SideBar
         mTitleView.setRightText(getString(R.string.create), new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                toActivity(CreateContactActivity.class);
             }
         });
 
