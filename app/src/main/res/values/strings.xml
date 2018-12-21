@@ -1,5 +1,48 @@
 <resources>
     <string name="app_name">AirMonitor</string>
+
+    <string name="input_user_account">请输入用户名</string>
+    <string name="input_user_address">请输入地址</string>
+    <string name="input_user_phone">请输入手机号码</string>
+    <string name="input_user_password">请输入密码</string>
+    <string name="input_user_mark">备注</string>
+    <string name="btn_sure">确定</string>
+    <string name="btn_cancle">取消</string>
+
+
+    <string name="menu_about">关于本机</string>
+    <string name="menu_connect_network">联网</string>
+    <string name="menu_up_data">数据上传</string>
+    <string name="menu_set_time">时间/日志设置</string>
+    <string name="menu_mark">标定</string>
+
+    <string name="about_xinghao">型号</string>
+    <string name="about_ccrq">出厂日期</string>
+    <string name="about_version">当前版本</string>
+    <string name="about_count">检测次数</string>
+
+    <string name="about_check_update">版本更新</string>
+    <string name="about_reset">恢复出厂设置</string>
+
+    <string name="reset_tip_1">此操作会删除您内存设备中的数据，包括：</string>
+    <string name="reset_tip_2">1.您的账户;</string>
+    <string name="reset_tip_3">2.已有用户以及用户数据。</string>
+    <string name="reset_tip_4">数据一旦重置，不可恢复，确认重置吗？</string>
+    <string name="current_user_id">请输入当前用户</string>
+
+
+    <string name="handle_up_to_server">备份至云端</string>
+    <string name="auto_up_to_server">自动备份至云端</string>
+
+    <string name="handle_up_to_sd">备份至SD卡</string>
+    <string name="handle_up_to_email">备份至邮箱</string>
+    <string name="handle_up_to_usb">数据线导出</string>
+
+    <string name="hour_24">24小时制</string>
+    <string name="auto_sure_time">自动确定时间和日期</string>
+    <string name="auto_sure_arec">时区</string>
+    <string name="set_time">设置时间</string>
+
     <string name="login">登录</string>
     <string name="login_username_hint">请输入用户名</string>
     <string name="login_pwd_hint">请输入密码</string>
@@ -14,10 +57,7 @@
     <string name="contact_home_num_hint">请输入房间号</string>
     <string name="contact_extra_hint">备注</string>
 
-
     <string name="history_record">历史数据</string>
-
-
-
     <string name="detection">检测</string>
+
 </resources>

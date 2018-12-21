@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page_bg_color"
+    tools:context="com.air.monitor.MainActivity">
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="@dimen/activity_page_margin_right"
+        android:layout_marginLeft="@dimen/activity_page_margin_left"
+        android:text="@string/reset_tip_1"
+        android:textSize="16sp"
+        android:textColor="@color/item_text_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginRight="@dimen/activity_page_margin_right"
+        android:layout_marginLeft="@dimen/activity_page_margin_left"
+        android:text="@string/reset_tip_2"
+        android:textSize="16sp"
+        android:textColor="@color/item_text_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginRight="@dimen/activity_page_margin_right"
+        android:layout_marginLeft="@dimen/activity_page_margin_left"
+        android:text="@string/reset_tip_3"
+        android:textSize="16sp"
+        android:textColor="@color/item_text_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginRight="@dimen/activity_page_margin_right"
+        android:layout_marginLeft="@dimen/activity_page_margin_left"
+        android:text="@string/reset_tip_4"
+        android:textSize="16sp"
+        android:textColor="@color/item_text_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/common_button_style"
+        android:layout_marginLeft="@dimen/activity_page_margin_left"
+        android:layout_marginRight="@dimen/activity_page_margin_right"
+        android:layout_marginTop="40dp"
+        android:text="@string/btn_sure" />
+
+</LinearLayout>

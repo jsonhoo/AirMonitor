@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page_bg_color"
+    tools:context="com.air.monitor.MainActivity">
+
+
+    <RelativeLayout
+        android:background="@color/white_light"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/item_margin_left"
+        android:layout_marginRight="@dimen/item_margin_right"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height">
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:text="@string/hour_24"
+            android:textColor="@color/item_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/sb_hour"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            style="@style/SwitchButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/white_light"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/item_margin_left"
+        android:layout_marginRight="@dimen/item_margin_right"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height">
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:text="@string/auto_sure_time"
+            android:textColor="@color/item_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/sb_auto_time"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            style="@style/SwitchButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_set_arec"
+        android:background="@drawable/selector_white_button"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="@dimen/item_margin_left"
+        android:layout_marginRight="@dimen/item_margin_right"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height">
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:text="@string/auto_sure_arec"
+            android:textColor="@color/item_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/arrow_right"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_set_hour"
+        android:background="@drawable/selector_white_button"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="@dimen/item_margin_left"
+        android:layout_marginRight="@dimen/item_margin_right"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height">
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:text="@string/set_time"
+            android:textColor="@color/item_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_toLeftOf="@+id/iv_left_arrow"
+            android:paddingLeft="10dp"
+            android:textSize="16sp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:text="2018/12/21 1:41"
+            android:textColor="@color/item_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_left_arrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/arrow_right"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</LinearLayout>
