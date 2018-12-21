@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_page_margin_left">20dp</dimen>
+    <dimen name="activity_page_margin_right">20dp</dimen>
+
+    <dimen name="icon_size">20dp</dimen>
+    <dimen name="item_height">48dp</dimen>
+
+    <dimen name="btn_next_height">48dp</dimen>
+    <dimen name="font_large">16sp</dimen>
+
+    <dimen name="item_margin_left">5dp</dimen>
+    <dimen name="item_margin_right">5dp</dimen>
+
+</resources>
