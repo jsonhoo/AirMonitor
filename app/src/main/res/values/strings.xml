@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">AirMonitor</string>
 
-
     <string name="input_user_account">请输入用户名</string>
     <string name="input_user_address">请输入地址</string>
     <string name="input_user_phone">请输入手机号码</string>
@@ -43,4 +42,22 @@
     <string name="auto_sure_time">自动确定时间和日期</string>
     <string name="auto_sure_arec">时区</string>
     <string name="set_time">设置时间</string>
+
+    <string name="login">登录</string>
+    <string name="login_username_hint">请输入用户名</string>
+    <string name="login_pwd_hint">请输入密码</string>
+
+    <string name="contact">联系人</string>
+    <string name="create">新建</string>
+    <string name="contact_count">位联系人</string>
+    <string name="create_contact">新建联系人</string>
+    <string name="add_contact">添加</string>
+    <string name="contact_username_hint">请输入用户名</string>
+    <string name="contact_address_hint">请输入地址</string>
+    <string name="contact_home_num_hint">请输入房间号</string>
+    <string name="contact_extra_hint">备注</string>
+
+    <string name="history_record">历史数据</string>
+    <string name="detection">检测</string>
+
 </resources>
