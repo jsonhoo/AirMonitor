@@ -4,5 +4,11 @@
     <string name="login_username_hint">请输入用户名</string>
     <string name="login_pwd_hint">请输入密码</string>
 
+    <string name="contact">联系人</string>
+    <string name="create">新建</string>
+    <string name="contact_count">位联系人</string>
+
+
+
     <string name="detection">检测</string>
 </resources>
