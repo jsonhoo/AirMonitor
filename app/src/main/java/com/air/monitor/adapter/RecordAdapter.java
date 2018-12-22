@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.air.monitor.bean.Contact;
+import com.air.monitor.bean.HistoryRecord;
 
 import java.util.List;
 
@@ -15,7 +16,7 @@ import java.util.List;
 public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.MyViewHolder> implements View.OnClickListener {
 
     private Context context;
-    private List<Contact> dataList;
+    private List<HistoryRecord> dataList;
     private int layoutId;
     private OnItemClickListener mOnItemClickListener = null;
 

@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.air.monitor.R;
 import com.air.monitor.adapter.RecordAdapter;
-import com.air.monitor.bean.Contact;
+import com.air.monitor.bean.HistoryRecord;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
@@ -18,7 +18,7 @@ import java.util.List;
 public class RecordActivity extends BaseActivity {
 
     private RecordAdapter adapter;
-    private static List<Contact> mDataList = new ArrayList<>();
+    private List<HistoryRecord> mDataList = new ArrayList<>();
 
     @Override
     protected View initView() {
@@ -32,14 +32,14 @@ public class RecordActivity extends BaseActivity {
         mTitleView.setRightOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                toActivity(ChartActivity.class);
             }
         }, R.mipmap.chart);
 
 
         for (int i = 0; i < 20; i++) {
-            Contact contact = new Contact();
-            mDataList.add(contact);
+            HistoryRecord record = new HistoryRecord();
+            mDataList.add(record);
         }
 
         RefreshLayout refreshLayout = (RefreshLayout) mView.findViewById(R.id.refreshLayout);
@@ -58,7 +58,7 @@ public class RecordActivity extends BaseActivity {
         RecyclerView recyclerView = (RecyclerView) mView.findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL));
-        adapter = new RecordAdapter(this, mDataList, R.layout.item_list_contact);
+        adapter = new RecordAdapter(this, mDataList, R.layout.item_list_record);
         recyclerView.setAdapter(adapter);
         adapter.setOnItemClickListener(new RecordAdapter.OnItemClickListener() {
             @Override

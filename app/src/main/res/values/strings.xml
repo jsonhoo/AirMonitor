@@ -58,6 +58,9 @@
     <string name="contact_extra_hint">备注</string>
 
     <string name="history_record">历史数据</string>
+    <string name="time">时间</string>
+
+
     <string name="detection">检测</string>
 
 </resources>
