@@ -18,6 +18,6 @@ public class CreateContactActivity extends BaseActivity {
     }
 
     public void add(View view) {
-        toActivity(RecordActivity.class);
+        toActivity(RecordListActivity.class);
     }
 }

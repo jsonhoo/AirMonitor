@@ -17,8 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.CreateContactActivity"/>
-        <activity android:name=".ui.RecordActivity"/>
+        <activity android:name=".ui.RecordListActivity"/>
         <activity android:name=".ui.ChartActivity"/>
+        <activity android:name=".ui.DataActivity"/>
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.DatePicker;
 
 import com.air.monitor.R;
 import com.air.monitor.adapter.RecordAdapter;
@@ -15,14 +16,14 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecordActivity extends BaseActivity {
+public class RecordListActivity extends BaseActivity {
 
     private RecordAdapter adapter;
     private List<HistoryRecord> mDataList = new ArrayList<>();
 
     @Override
     protected View initView() {
-        return View.inflate(this, R.layout.activity_record, null);
+        return View.inflate(this, R.layout.activity_record_list, null);
     }
 
     @Override
@@ -63,6 +64,7 @@ public class RecordActivity extends BaseActivity {
         adapter.setOnItemClickListener(new RecordAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
+                toActivity(DataActivity.class);
             }
         });
     }

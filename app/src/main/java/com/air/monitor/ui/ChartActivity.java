@@ -1,14 +1,20 @@
 package com.air.monitor.ui;
 
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.air.monitor.R;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
+import cn.aigestudio.datepicker.cons.DPMode;
+import cn.aigestudio.datepicker.views.DatePicker;
 import lecho.lib.hellocharts.listener.LineChartOnValueSelectListener;
 import lecho.lib.hellocharts.model.Axis;
 import lecho.lib.hellocharts.model.Line;
@@ -24,20 +30,24 @@ public class ChartActivity extends BaseActivity {
     private LineChartData data;
     private int numberOfLines = 1;
     private int maxNumberOfLines = 4;
-    private int numberOfPoints = 12;
+    private int numberOfPoints = 24;
 
     float[][] randomNumbersTab = new float[maxNumberOfLines][numberOfPoints];
 
     private boolean hasAxes = true;
-    private boolean hasAxesNames = true;
+    private boolean hasAxesNames = false;
     private boolean hasLines = true;
-    private boolean hasPoints = true;
+    private boolean hasPoints = false;
     private ValueShape shape = ValueShape.CIRCLE;
     private boolean isFilled = true;
     private boolean hasLabels = false;
     private boolean isCubic = false;
     private boolean hasLabelForSelected = false;
-    private boolean pointsHaveDifferentColor;
+    private boolean pointsHaveDifferentColor = false;
+
+
+    TextView tvPick;
+
 
     @Override
     protected View initView() {
@@ -52,14 +62,49 @@ public class ChartActivity extends BaseActivity {
 
         chart = (LineChartView) mView.findViewById(R.id.chart);
         chart.setOnValueTouchListener(new ValueTouchListener());
+        chart.setZoomEnabled(false);
+        chart.setViewportCalculationEnabled(false);
 
         generateValues();
 
         generateData();
 
-        chart.setViewportCalculationEnabled(false);
-
         resetViewport();
+
+
+        initDatePick();
+    }
+
+    private void initDatePick() {
+        tvPick = findViewById(R.id.time_pick);
+        tvPick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog();
+            }
+        });
+
+    }
+
+
+    private Dialog dialog;
+
+    private void showDialog() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View view = View.inflate(this, R.layout.dialog_time_pick, null);
+        DatePicker datePicker = view.findViewById(R.id.date_pick);
+        datePicker.setDate(2018, 12);
+        datePicker.setMode(DPMode.SINGLE);
+        datePicker.setOnDatePickedListener(new DatePicker.OnDatePickedListener() {
+            @Override
+            public void onDatePicked(String date) {
+                dialog.dismiss();
+                tvPick.setText(date);
+            }
+        });
+        builder.setView(view);
+        dialog = builder.show();
     }
 
 
@@ -71,21 +116,6 @@ public class ChartActivity extends BaseActivity {
         }
     }
 
-    private void reset() {
-        numberOfLines = 1;
-        hasAxes = true;
-        hasAxesNames = true;
-        hasLines = true;
-        hasPoints = true;
-        shape = ValueShape.CIRCLE;
-        isFilled = false;
-        hasLabels = false;
-        isCubic = false;
-        hasLabelForSelected = false;
-        pointsHaveDifferentColor = false;
-        chart.setValueSelectionEnabled(hasLabelForSelected);
-        resetViewport();
-    }
 
     private void resetViewport() {
         final Viewport v = new Viewport(chart.getMaximumViewport());
@@ -115,6 +145,7 @@ public class ChartActivity extends BaseActivity {
             line.setHasLabelsOnlyForSelected(hasLabelForSelected);
             line.setHasLines(hasLines);
             line.setHasPoints(hasPoints);
+            line.setStrokeWidth(1);
             if (pointsHaveDifferentColor) {
                 line.setPointColor(ChartUtils.COLORS[(i + 1) % ChartUtils.COLORS.length]);
             }

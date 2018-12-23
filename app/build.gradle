@@ -27,4 +27,5 @@ dependencies {
     compile 'org.kymjs.kjframe:kjframe:2.4.6.2'
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
     compile 'com.github.lecho:hellocharts-library:1.5.8@aar'
+    compile 'cn.aigestudio.datepicker:DatePicker:2.2.0'
 }
