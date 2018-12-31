@@ -1,4 +1,4 @@
-package com.air.monitor.view;
+package com.air.monitor.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

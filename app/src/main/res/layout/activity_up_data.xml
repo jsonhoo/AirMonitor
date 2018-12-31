@@ -1,193 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/page_bg_color"
-    tools:context="com.air.monitor.MainActivity">
+    android:orientation="vertical">
 
 
     <RelativeLayout
         android:id="@+id/rl_handle_server"
-        android:background="@drawable/selector_white_button"
-        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
         android:layout_marginLeft="@dimen/item_margin_left"
         android:layout_marginRight="@dimen/item_margin_right"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/item_height">
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_white_button">
 
         <TextView
-            android:paddingLeft="10dp"
-            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
             android:text="@string/handle_up_to_server"
             android:textColor="@color/item_text_color"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:textSize="16sp" />
 
         <ImageView
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"
-            android:background="@mipmap/arrow_right"
-            android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/arrow_right" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rl_auto_to_server"
-        android:background="@drawable/selector_white_button"
-        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
         android:layout_marginLeft="@dimen/item_margin_left"
         android:layout_marginRight="@dimen/item_margin_right"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/item_height">
+        android:layout_marginTop="2dp"
+        android:background="@drawable/selector_white_button">
 
         <TextView
-            android:paddingLeft="10dp"
-            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
             android:text="@string/auto_up_to_server"
             android:textColor="@color/item_text_color"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:textSize="16sp" />
 
 
         <com.kyleduo.switchbutton.SwitchButton
             android:id="@+id/sb_default"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"
             style="@style/SwitchButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
 
         <!--<ImageView-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:layout_marginRight="10dp"-->
-            <!--android:background="@mipmap/arrow_right"-->
-            <!--android:layout_gravity="center_vertical"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content" />-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:background="@mipmap/arrow_right"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
     </RelativeLayout>
 
 
     <RelativeLayout
         android:id="@+id/rl_dump_sd"
-        android:background="@drawable/selector_white_button"
-        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
         android:layout_marginLeft="@dimen/item_margin_left"
         android:layout_marginRight="@dimen/item_margin_right"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/item_height">
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_white_button">
 
         <LinearLayout
-            android:layout_marginLeft="10dp"
-            android:layout_centerVertical="true"
-            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
 
             <TextView
-                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/handle_up_to_sd"
                 android:textColor="@color/item_text_color"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tv_sd"
-                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="可用12G，总共16G"
                 android:textColor="@color/item_text_color"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textSize="12sp" />
         </LinearLayout>
 
 
         <ImageView
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"
-            android:background="@mipmap/arrow_right"
-            android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/arrow_right" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rl_dump_email"
-        android:background="@drawable/selector_white_button"
-        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
         android:layout_marginLeft="@dimen/item_margin_left"
         android:layout_marginRight="@dimen/item_margin_right"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/item_height">
+        android:layout_marginTop="2dp"
+        android:background="@drawable/selector_white_button">
 
         <LinearLayout
-            android:layout_marginLeft="10dp"
-            android:layout_centerVertical="true"
-            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
 
             <TextView
-                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/handle_up_to_email"
                 android:textColor="@color/item_text_color"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tv_email"
-                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="513036862@qq.com"
                 android:textColor="@color/item_text_color"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <ImageView
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"
-            android:background="@mipmap/arrow_right"
-            android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/arrow_right" />
     </RelativeLayout>
 
 
     <RelativeLayout
         android:id="@+id/rl_dump_usb"
-        android:background="@drawable/selector_white_button"
-        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
         android:layout_marginLeft="@dimen/item_margin_left"
         android:layout_marginRight="@dimen/item_margin_right"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/item_height">
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_white_button">
 
         <TextView
-            android:paddingLeft="10dp"
-            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
             android:text="@string/handle_up_to_usb"
             android:textColor="@color/item_text_color"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:textSize="16sp" />
 
         <ImageView
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"
-            android:background="@mipmap/arrow_right"
-            android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/arrow_right" />
     </RelativeLayout>
 
 </LinearLayout>

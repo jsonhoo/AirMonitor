@@ -38,7 +38,7 @@ public class LoginActivity extends BaseActivity{
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                toActivity(DetectActivity.class);
             }
         });
     }

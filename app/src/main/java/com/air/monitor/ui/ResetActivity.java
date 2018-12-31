@@ -1,4 +1,4 @@
-package com.air.monitor.view;
+package com.air.monitor.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,9 +12,6 @@ public class ResetActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reset);
-
-
-
     }
 
 

@@ -18,11 +18,17 @@
         </activity>
         <activity android:name=".ui.FindPwdActivity"/>
         <activity android:name=".ui.RegisterActivity"/>
+        <activity android:name=".ui.DetectActivity"/>
+
+
+
         <activity android:name=".ui.ContactActivity"/>
         <activity android:name=".ui.CreateContactActivity"/>
         <activity android:name=".ui.RecordListActivity"/>
         <activity android:name=".ui.ChartActivity"/>
         <activity android:name=".ui.DataActivity"/>
+        <activity android:name=".ui.AboutActivity"/>
+        <activity android:name=".ui.MenuActivity"/>
     </application>
 
 </manifest>

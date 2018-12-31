@@ -1,111 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/page_bg_color"
-    tools:context="com.air.monitor.MainActivity">
+    android:orientation="vertical">
 
 
     <LinearLayout
-        android:background="@drawable/shape_small_label"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_marginLeft="@dimen/activity_page_margin_left"
+        android:layout_marginRight="@dimen/activity_page_margin_right"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="@dimen/activity_page_margin_left"
-        android:layout_marginRight="@dimen/activity_page_margin_right"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/item_height">
+        android:background="@drawable/shape_small_label">
 
         <ImageView
-            android:layout_marginLeft="10dp"
-            android:background="@mipmap/user_icon"
-            android:layout_gravity="center_vertical"
             android:layout_width="@dimen/icon_size"
-            android:layout_height="@dimen/icon_size" />
+            android:layout_height="@dimen/icon_size"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/user_icon" />
+
         <EditText
-            android:background="@null"
-            android:paddingLeft="10dp"
-            android:textSize="16sp"
             android:id="@+id/ev_user_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
             android:hint="@string/input_user_account"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:paddingLeft="10dp"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
-        android:background="@drawable/shape_small_label"
-        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
         android:layout_marginLeft="@dimen/activity_page_margin_left"
         android:layout_marginRight="@dimen/activity_page_margin_right"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/item_height">
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_small_label">
 
         <ImageView
-            android:layout_marginLeft="10dp"
-            android:background="@mipmap/user_phone"
-            android:layout_gravity="center_vertical"
             android:layout_width="@dimen/icon_size"
-            android:layout_height="@dimen/icon_size" />
+            android:layout_height="@dimen/icon_size"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/user_pwd" />
+
         <EditText
-            android:background="@null"
-            android:paddingLeft="10dp"
-            android:textSize="16sp"
             android:id="@+id/ev_user_phone"
-            android:hint="@string/input_user_phone"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:background="@drawable/shape_small_label"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="@dimen/activity_page_margin_left"
-        android:layout_marginRight="@dimen/activity_page_margin_right"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/item_height">
-
-        <ImageView
-            android:layout_marginLeft="10dp"
-            android:background="@mipmap/user_address"
-            android:layout_gravity="center_vertical"
-            android:layout_width="@dimen/icon_size"
-            android:layout_height="@dimen/icon_size" />
-        <EditText
+            android:layout_height="match_parent"
             android:background="@null"
+            android:hint="@string/input_user_password"
             android:paddingLeft="10dp"
-            android:textSize="16sp"
-            android:id="@+id/ev_user_address"
-            android:hint="@string/input_user_address"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
-        android:background="@drawable/shape_small_label"
-        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
         android:layout_marginLeft="@dimen/activity_page_margin_left"
         android:layout_marginRight="@dimen/activity_page_margin_right"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/item_height">
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_small_label">
 
         <ImageView
-            android:layout_marginLeft="10dp"
-            android:background="@mipmap/user_mark"
-            android:text="@string/input_user_mark"
-            android:layout_gravity="center_vertical"
             android:layout_width="@dimen/icon_size"
-            android:layout_height="@dimen/icon_size" />
-        <TextView
-            android:paddingLeft="10dp"
-            android:textSize="16sp"
+            android:layout_height="@dimen/icon_size"
             android:layout_gravity="center_vertical"
-            android:hint="@string/input_user_mark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/user_pwd" />
+
+        <EditText
+            android:id="@+id/ev_user_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/input_user_password_again"
+            android:paddingLeft="10dp"
+            android:textSize="16sp" />
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_height"
+            android:layout_marginLeft="@dimen/activity_page_margin_left"
+            android:layout_marginRight="@dimen/activity_page_margin_right"
+            android:background="@drawable/shape_small_label"
+            android:paddingRight="48dp">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/user_code" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:hint="@string/input_user_code"
+                android:paddingLeft="10dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_page_margin_right"
+            android:background="@drawable/selector_red_corners_button"
+            android:text="@string/input_get_code"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/btn_login"
@@ -113,7 +128,6 @@
         android:layout_marginLeft="@dimen/activity_page_margin_left"
         android:layout_marginRight="@dimen/activity_page_margin_right"
         android:layout_marginTop="30dp"
-        android:text="@string/btn_sure" />
-
+        android:text="@string/register" />
 
 </LinearLayout>

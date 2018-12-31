@@ -1,4 +1,4 @@
-package com.air.monitor.view;
+package com.air.monitor.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,13 +6,17 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.air.monitor.R;
+import com.air.monitor.dialog.CustomDialog;
 
-public class AboutActivity extends AppCompatActivity implements View.OnClickListener{
+public class MenuActivity extends AppCompatActivity implements View.OnClickListener{
+
+    private CustomDialog.Builder builder;
+    private CustomDialog mDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.activity_menu);
 
         RelativeLayout rl_about = (RelativeLayout)findViewById(R.id.rl_about);
         rl_about.setOnClickListener(this);
@@ -31,6 +35,7 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
         RelativeLayout rl_set_mark = (RelativeLayout)findViewById(R.id.rl_set_mark);
         rl_set_mark.setOnClickListener(this);
 
+        builder = new CustomDialog.Builder(this);
     }
 
 
@@ -46,7 +51,29 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
             case R.id.rl_set_time:
                 break;
             case R.id.rl_set_mark:
+                showTwoButtonDialog("","","",conFirmListener,cancelListener);
                 break;
         }
     }
+
+    private void showTwoButtonDialog(String alertText, String confirmText, String cancelText, View.OnClickListener conFirmListener, View.OnClickListener cancelListener) {
+        mDialog = builder.setMessage(alertText)
+                .setPositiveButton(confirmText, conFirmListener)
+                .setNegativeButton(cancelText, cancelListener)
+                .createTwoButtonDialog();
+        mDialog.show();
+    }
+    private View.OnClickListener conFirmListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            // TODO
+        }
+    };
+    private View.OnClickListener cancelListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            // TODO
+        }
+    };
+
 }
